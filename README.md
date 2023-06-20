@@ -38,8 +38,7 @@ php artisan vendor:publish --tag="laravel-form-components-views"
 ## Usage
 
 ```php
-$formComponents = new Vormkracht10\FormComponents();
-echo $formComponents->echoPhrase('Hello, Vormkracht10!');
+
 ```
 
 ## Testing
