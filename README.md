@@ -21,6 +21,52 @@ You can publish the config file with:
 php artisan vendor:publish --tag="laravel-form-components-config"
 ```
 
+List of all available form components:
+
+```html
+<x-button />
+<x-checkbox />
+<x-color />
+<x-datalist />
+<x-date />
+<x-email />
+<x-errors />
+<x-fieldset />
+<x-file />
+<x-form />
+<x-group />
+<x-hidden />
+<x-image />
+<x-input />
+<x-label />
+<x-legend />
+<x-month />
+<x-number />
+<x-optgroup />
+<x-option />
+<x-output />
+<x-password />
+<x-phone />
+<x-radio />
+<x-range />
+<x-reset />
+<x-search />
+<x-select />
+<x-submit />
+<x-text />
+<x-textarea />
+<x-time />
+<x-timezone />
+<x-toggle />
+<x-url />
+<x-week />
+```
+
+# Third party
+```html
+<x-dropzone />
+```
+
 This is the contents of the published config file:
 
 ```php
