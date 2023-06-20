@@ -2,24 +2,42 @@
 
 namespace Vormkracht10\FormComponents;
 
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Storage;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Vormkracht10\FormComponents\Commands\FormComponentsCommand;
 
 class FormComponentsServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
-        /*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
-         */
         $package
             ->name('laravel-form-components')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel-form-components_table')
-            ->hasCommand(FormComponentsCommand::class);
+            ->hasConfigFile();
+
+        $this->registerViewComponents();
+    }
+
+    public function registerViewComponents()
+    {
+        if (
+            null !== $namespace = config('form-components.namespace.slug') &&
+            config('form-components.namespace.separator') === '::'
+        ) {
+            dd($namespace);
+            Blade::componentNamespace('Vormkracht10\\FormComponents\\Components', $namespace);
+        } else {
+            Storage::allFiles(__DIR__.'/Components')->each(function ($file) {
+                $component = str_replace('.php', '', pathinfo($file, PATHINFO_FILENAME));
+
+                $namespace = config('form-components.namespace.slug');
+
+                if ($namespace !== null) {
+                    $namespace .= config('form-components.namespace.separator');
+                }
+
+                Blade::component($namespace.$component, '\\Vormkracht10\\FormComponents\\Components\\'.$component);
+            });
+        }
     }
 }
