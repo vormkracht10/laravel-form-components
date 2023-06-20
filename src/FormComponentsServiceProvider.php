@@ -41,6 +41,8 @@ class FormComponentsServiceProvider extends PackageServiceProvider
                     }
                 }
 
+                $this->app->config->set('form-components.prefix', $namespace);
+
                 Blade::component($namespace.$component, '\\Vormkracht10\\FormComponents\\Components\\'.$component);
             });
         }

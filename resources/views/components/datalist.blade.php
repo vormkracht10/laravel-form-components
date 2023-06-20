@@ -1,0 +1,2 @@
+<datalist {{ $attributes }}>
+</datalist>

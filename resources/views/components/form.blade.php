@@ -1,1 +1,3 @@
-TEST
+<form {{ $attributes }}>
+    {{ $slot }}
+</form>

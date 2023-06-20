@@ -1,0 +1,1 @@
+<legend>{{ $slot }}</legend>
