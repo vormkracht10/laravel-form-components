@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Vormkracht10\FormComponents\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class FormComponentsCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-form-components';
 
     public $description = 'My command';
 
