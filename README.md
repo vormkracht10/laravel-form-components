@@ -1,7 +1,4 @@
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
-
-# This is my package laravel-form-components
+# Laravel Form Components
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/vormkracht10/laravel-form-components.svg?style=flat-square)](https://packagist.org/packages/vormkracht10/laravel-form-components)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/vormkracht10/laravel-form-components/run-tests?label=tests)](https://github.com/vormkracht10/laravel-form-components/actions?query=workflow%3Arun-tests+branch%3Amain)
