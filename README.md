@@ -15,13 +15,6 @@ You can install the package via composer:
 composer require vormkracht10/laravel-form-components
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="laravel-form-components-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash
@@ -32,6 +25,7 @@ This is the contents of the published config file:
 
 ```php
 return [
+
 ];
 ```
 
