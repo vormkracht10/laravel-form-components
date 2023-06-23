@@ -1,3 +1,3 @@
 <label {{ $attributes }}>
-    {{ $slot }}
+    {{ trim($slot) ?: $attributes->get('label') }}
 </label>
