@@ -30,10 +30,15 @@ class FormComponentsServiceProvider extends PackageServiceProvider
                 $component = Str::slug(str_replace('.php', '', pathinfo($file, PATHINFO_FILENAME)));
                 $namespace = '';
 
-                $namespace = $this->app->config['form-components.namespace.slug'];
+                if (
+                    $namespace !== 'form' &&
+                    $component !== 'form'
+                ) {
+                    $namespace = $this->app->config['form-components.namespace.slug'];
 
-                if ($namespace !== null) {
-                    $namespace .= config('form-components.namespace.separator');
+                    if ($namespace !== null) {
+                        $namespace .= config('form-components.namespace.separator');
+                    }
                 }
 
                 $this->app->config->set('form-components.prefix', $namespace);
